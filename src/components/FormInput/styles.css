@@ -12,6 +12,24 @@
     border-radius: 15px;
 }
 
+.input-wrapper input::-webkit-inner-spin-button,
+.input-wrapper input::-webkit-outer-spin-button {
+    height: 30px;
+    width: 30px;
+}
+
+.input-wrapper input::-webkit-inner-spin-button:after {
+    content: "▲";
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+.input-wrapper input::-webkit-outer-spin-button:after {
+    content: "▼";
+    font-size: 16px;
+    padding-right: 5px;
+}
+
 @media (max-width: 768px) {
 .input-wrapper {
     flex-direction: column;
