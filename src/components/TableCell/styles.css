@@ -1,0 +1,14 @@
+.table-cell-main {
+    min-width: 65px;
+    width: 100%;
+    min-height: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table-cell-gradient {
+    background: linear-gradient(to bottom, #ffdb4d, #e62424);
+    color: #fff;
+}

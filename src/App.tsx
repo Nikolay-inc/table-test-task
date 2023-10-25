@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import { FC, useState, createContext } from 'react';
+import Form from './components/Form';
+import { IAppContext } from './types';
 import './App.css';
+import Table from './components/Table';
 
-function App() {
+export const AppContext = createContext<any>(null);
+
+const App: FC = () => {
+  const [appData, setAppData] = useState<IAppContext | null>(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{appData, setAppData}}>
+      <div className='main-container'>
+        <Form />
+        <div className='divider' />
+        <Table />
+      </div>
+    </AppContext.Provider>
   );
 }
 
